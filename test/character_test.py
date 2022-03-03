@@ -9,3 +9,7 @@ def test_character_health_starts_at_1000():
 def test_character_level_starts_at_1():
     character = Character()
     assert character.level == 1
+
+def test_character_Alive_or_Dead():
+    character = Character()
+    assert character.alive == True
