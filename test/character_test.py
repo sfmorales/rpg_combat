@@ -10,6 +10,15 @@ def test_character_level_starts_at_1():
     character = Character()
     assert character.level == 1
 
-def test_character_Alive_or_Dead():
+
+def test_character_starts_alive():
     character = Character()
     assert character.alive == True
+
+
+def test_character_can_damage_character():
+    alice = Character()
+    bob = Character()
+    old_bob_health = bob.health
+    alice.attack(bob)
+    assert bob.health < old_bob_health
