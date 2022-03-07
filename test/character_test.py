@@ -22,3 +22,10 @@ def test_character_can_damage_character():
     old_bob_health = bob.health
     alice.attack(bob)
     assert bob.health < old_bob_health
+
+def test_character_dies_when_health_0():
+    alice = Character()
+    bob = Character()
+    for n in range(0,100):
+        alice.attack(bob)
+    assert bob.dies
