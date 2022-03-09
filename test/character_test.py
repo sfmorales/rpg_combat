@@ -14,3 +14,10 @@ def test_character_level_starts_at_1():
 def test_character_starts_alive():
     wizard = Character()
     assert wizard.alive == True
+
+def test_character_can_damage_character():
+    wizard = Character()
+    dorothy = Character()
+    old_wizard_health = wizard.health
+    dorothy.attack(wizard)
+    assert wizard.health < old_wizard_health
