@@ -1,5 +1,5 @@
 class Character:
-  def __init__(self) -> None:
-      self.health = 1000
-      print("Setting Health")
-      print (self.health)
+    def __init__(self) -> None:
+        initial_level = 1
+        self.level = initial_level
+        self.health = 1000
